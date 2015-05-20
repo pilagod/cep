@@ -1,0 +1,256 @@
+/** {*/
+    /*-webkit-box-sizing: border-box;*/
+    /*-moz-box-sizing: border-box;*/
+    /*-ms-box-sizing: border-box;*/
+    /*-o-box-sizing: border-box;*/
+    /*box-sizing: border-box;*/
+/*}*/
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.4;
+    /*overflow-y: hidden;*/
+}
+
+img {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+section {
+    width: 100%;
+    height: 100%;
+
+    -webkit-transition: all 1.5s ease-in-out;
+    -moz-transition: all 1.5s ease-in-out;
+    -ms-transition: all 1.5s ease-in-out;
+    -o-transition: all 1.5s ease-in-out;
+    transition: all 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.6em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1em;
+}
+
+div.main {
+    position: relative;
+    width: 960px;
+    height: 100% !important;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Introduction */
+
+#introduction {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#introduction > div.container-fluid {
+    text-align: center;
+}
+
+#me {
+    opacity: 0;
+    padding-top: 13%;
+    width: 15em;
+}
+
+/* Character */
+
+#character {
+    position: absolute;
+    /*top: 0;*/
+    top: 100%;
+    left: 0;
+    text-align: center;
+}
+
+#character img {
+    width: 13em;
+}
+
+#character>div.container-fluid {
+    position: relative;
+}
+
+/* 我用三個特質來形容自己 */
+
+#character div.container-fluid>span {
+    display: inline-block;
+    margin-top: 10%;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#character div.row.description{
+    margin-top: 8%;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#character div.row.description>div{
+    text-align: center;
+}
+
+#character div.row.description span{
+    font-weight: bold;
+}
+
+/* Character Project */
+#character div.row.project{
+    position: absolute;
+    width: 100%;
+    height: 35%;
+    bottom: 11%;
+    left: 0;
+}
+
+#character div.row.project>div{
+    text-align: left;
+}
+
+#character div.row.project>div:first-of-type {
+    padding-left: 2.5em;
+}
+
+/*#character div.row.project>div>span:not(.type-cursor){*/
+    /*padding-left: 2em;*/
+/*}*/
+
+#character div.row.project img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    padding-top: 1.4em;
+}
+
+#character div.row.project video{
+    opacity: 0;
+    width: 100%;
+    padding-top: 1.4em;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+
+#breakbox_wrapper, #multithinking_wrapper, #action_wrapper {
+    position: relative;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#breakbox, #multithinking, #action {
+    -webkit-transform: scale(0);
+    -mos-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* General */
+
+.scale-small {
+    -webkit-transform: scale(0.5) !important;
+    -mos-transform: scale(0.5) !important;
+    -ms-transform: scale(0.5) !important;
+    -o-transform: scale(0.5) !important;
+    transform: scale(0.5) !important;
+}
+
+.scale-big {
+    -webkit-transform: scale(2) !important;
+    -mos-transform: scale(2) !important;
+    -ms-transform: scale(2) !important;
+    -o-transform: scale(2) !important;
+    transform: scale(2) !important;
+}
+
+.show-by-opacity {
+    opacity: 1 !important;
+}
+
+.show-by-scale {
+    -webkit-transform: scale(1) !important;
+    -mos-transform: scale(1) !important;
+    -ms-transform: scale(1) !important;
+    -o-transform: scale(1) !important;
+    transform: scale(1) !important;
+}
+
+
+/* For Type Cursor */
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+    font-weight: bolder;
+    margin-left: -0.5em;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
