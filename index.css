@@ -1,16 +1,16 @@
-/** {*/
-    /*-webkit-box-sizing: border-box;*/
-    /*-moz-box-sizing: border-box;*/
-    /*-ms-box-sizing: border-box;*/
-    /*-o-box-sizing: border-box;*/
-    /*box-sizing: border-box;*/
-/*}*/
+@font-face {
+    font-family: Adobe-Fan-Heiti-Std-B;
+    src: url('fonts/Adobe-Fan-Heiti-Std-B.otf');
+}
 
 html, body{
     width: 100%;
     height: 100%;
     font-size: 18px;
-    line-height: 1.4;
+    line-height: 1.5;
+    font-family: Adobe-Fan-Heiti-Std-B;
+
+    background-color: wheat;
     /*overflow-y: hidden;*/
 }
 
@@ -61,13 +61,17 @@ div.main {
     margin: 0 auto;
 }
 
-/* Introduction */
+/*******************************/
+/*        Introduction         */
+/*******************************/
 
 #introduction {
     /*display: none;*/
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 2;
+    background: transparent;
 }
 
 #introduction > div.container-fluid {
@@ -80,7 +84,9 @@ div.main {
     width: 15em;
 }
 
-/* Character */
+/*******************************/
+/*          Character          */
+/*******************************/
 
 #character {
     position: absolute;
@@ -88,18 +94,20 @@ div.main {
     top: 100%;
     left: 0;
     text-align: center;
+    z-index: 1;
+    /*background-color: #ffffff;*/
+    background: transparent;
 }
 
 #character img {
-    width: 13em;
+    width: 12em;
 }
 
 #character>div.container-fluid {
     position: relative;
 }
 
-/* 我用三個特質來形容自己 */
-
+/* Description */
 #character div.container-fluid>span {
     display: inline-block;
     margin-top: 10%;
@@ -146,10 +154,6 @@ div.main {
     padding-left: 2.5em;
 }
 
-/*#character div.row.project>div>span:not(.type-cursor){*/
-    /*padding-left: 2em;*/
-/*}*/
-
 #character div.row.project img{
     position: absolute;
     top: 0;
@@ -171,7 +175,6 @@ div.main {
     transition: all 1s ease-in-out;
 }
 
-
 #breakbox_wrapper, #multithinking_wrapper, #action_wrapper {
     position: relative;
 
@@ -190,15 +193,209 @@ div.main {
     transform: scale(0);
 }
 
+/*******************************/
+/*         Motivation          */
+/*******************************/
+
+#motivation {
+    position: absolute;
+    /*top: 0;*/
+    top: 100%;
+    left: 0;
+    z-index: 0;
+    text-align: center;
+    background: transparent;
+}
+
+#motivation div.container-fluid {
+    position: relative;
+}
+
+/* 必須錄取我的理由 */
+#motivation div.container-fluid>span {
+    position: relative;
+    display: inline-block;
+    margin-top: 3%;
+    bottom: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+/* Description */
+#motivation div.row.description {
+    position: relative;
+    bottom: 0;
+    margin-top: 1em;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#motivation div.row.description>div{
+    opacity: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+#motivation div.row.description span{
+    font-weight: bold;
+}
+
+/* Content */
+#motivation div.row.content{
+    margin-top: 3em;
+}
+
+#motivation div.row.content span {
+    overflow: visible;
+    white-space: nowrap;
+}
+
+
+/*
+* motivation imgs
+*/
+
+#motivation img {
+    /*opacity: 0;*/
+    width: 10em;
+}
+
+#motivation div.imgs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#motivation div.imgs img {
+    position: absolute;
+}
+
+/* For Skills */
+
+#motivation div.skills{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#motivation div.skills>img {
+    opacity: 0;
+    width: 8em;
+}
+
+/* Web */
+#motivation div.skills>img:nth-child(1){
+    top: 5em;
+    left: 22em;
+}
+
+/* Mobile */
+#motivation div.skills>img:nth-child(2){
+    top: 10em;
+    left: 35em;
+}
+
+/* Hardware */
+#motivation div.skills>img:nth-child(3){
+    top: 7em;
+    left: 50em;
+}
+
+/* Reedot */
+#motivation div.skills>img:nth-child(4){
+    width: 10em;
+    top: 25em;
+    left: 25em;
+}
+
+/* Garena */
+#motivation div.skills>img:nth-child(5){
+    top: 20em;
+    left: 45em;
+}
+
+/* For Cooperation */
+
+#motivation div.cooperation>img {
+    opacity: 0;
+    width: 10em;
+}
+
+/* HackNTU Logo */
+#motivation div.cooperation>img:nth-child(1){
+    top: 5em;
+    left: 9em;
+}
+
+/* HackNTU People */
+#motivation div.cooperation>img:nth-child(2){
+    top: 15em;
+    left: 0em;
+    border-radius: 50%;
+    width: 14em;
+}
+
+/* Infoplat Logo */
+#motivation div.cooperation>img:nth-child(3){
+    top: 8em;
+    right: 5em;
+    width: 13em;
+}
+
+/* Infoplat People */
+#motivation div.cooperation>img:nth-child(4){
+    top: 20em;
+    right: 0;
+    width: 13em;
+    border-radius: 50%;
+}
+
+/* ATCC */
+#motivation div.cooperation>img:nth-child(5){
+    top: 25em;
+    left: 5em;
+    width: 13em;
+    border-radius: 50%;
+}
+
+/* For Change */
+#motivation div.change img {
+    opacity: 0;
+}
+
+#motivation div.change>img:nth-child(1){
+    top: 7.5em;
+    left: 0em;
+    width: 35em;
+}
+
 /* Footer */
 
 footer {
     position: absolute;
+    width: 100%;
     bottom: 0;
     left: 0;
+    padding: 0 2em;
 }
 
-/* General */
+/*******************************/
+/*           General           */
+/*******************************/
 
 .scale-small {
     -webkit-transform: scale(0.5) !important;
@@ -220,12 +417,23 @@ footer {
     opacity: 1 !important;
 }
 
+.hide-by-opacity {
+    opacity: 0 !important;
+}
+
 .show-by-scale {
     -webkit-transform: scale(1) !important;
     -mos-transform: scale(1) !important;
     -ms-transform: scale(1) !important;
     -o-transform: scale(1) !important;
     transform: scale(1) !important;
+}
+
+highlight {
+    /*color: palegreen;*/
+    /*color: lightseagreen;*/
+    /*color: dodgerblue;*/
+    color: #337BB8;
 }
 
 
