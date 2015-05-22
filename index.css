@@ -34,6 +34,7 @@ object {
 }
 
 object ~ span {
+    font-size: 1.15em;
     color: #2f3a35;
 }
 
@@ -469,6 +470,8 @@ highlight {
     /*color: dodgerblue;*/
     /*color: #337BB8;*/
     color: #efc034;
+    font-size: 1.15em;
+    margin: 0 0.1em;
 }
 
 
