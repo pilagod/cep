@@ -222,7 +222,7 @@ function projectFB(){
         var strings = [" <h3>Fakebook</h3><br>" +
         "這是類似FB的網站作品，<br>" +
         "主要是為了<highlight>學習\"Node.js\"</highlight>，<br>" +
-        "從<highlight>完全不會到完成</highlight>，總共花了<highlight>一個禮拜</highlight>。<br>" +
+        "從<highlight>完全不會到完成</highlight>，總共花<highlight>一個禮拜</highlight>。<br>" +
         "(圖中是當初上線讓朋友登入留言的畫面)",
             ""
         ];
@@ -339,14 +339,14 @@ function motivationCooperation(){
     }, 200);
     setTimeout(function(){
         object = $("#content_cooperation");
-        strings = ["在<highlight>HackNTU</highlight>裡與<highlight>九個部門</highlight>密切合作；<br>" +
-        "在<highlight>InfoPlat</highlight>裡執行<highlight>跨領域合作專案</highlight>；<br>" +
+        strings = ["在<highlight>HackNTU</highlight>與<highlight>九個部門</highlight>密切合作；<br>" +
+        "在<highlight>InfoPlat</highlight>執行<highlight>跨領域合作專案</highlight>；<br>" +
         "與<highlight>國企</highlight>、<highlight>經濟系夥伴</highlight>參與<highlight>2015ATCC</highlight>；<br>" +
         "...<br>" +
         "這些經驗<br>" +
-        "讓我的<highlight>想法</highlight>、<highlight>能力更加多元豐富</highlight>，<br>" +
-        "在<highlight>創創裡與不同領域的人合作</highlight>，<br>" +
-        "一定會<highlight>創造出很有價值的成果</highlight>。",
+        "讓我的<highlight>想法</highlight>、<highlight>能力</highlight>更加<highlight>多元豐富</highlight>，<br>" +
+        "在<highlight>創創</highlight>裡與<highlight>不同領域的人合作</highlight>，<br>" +
+        "一定會創造出很有<highlight>價值的成果</highlight>。",
             ""
         ];
         typeWords(object, strings, removeCursor);
@@ -437,18 +437,19 @@ function conclusion(){
         $("#motivation div.row.description").addClass("scale-small");
 
         setTimeout(function(){
-            $("#character div.slogan").append("<div>我是何均晏</div>");
-            $("#character div.slogan").append("<div>來自台大資管系</div>");
-            $("#character div.slogan").append("<div>我想加入創創</div>");
-            $("#character div.slogan").append("<div>結識志同道合的夥伴</div>");
-            $("#character div.slogan").append("<div>善用創創提供的資源</div>");
-            $("#character div.slogan").append("<div>打造一個更好的世界</div>");
+            $("#character div.slogan").append("<div>我是<highlight>何均晏</highlight></div>");
+            $("#character div.slogan").append("<div>來自<highlight>台大資管系</highlight></div>");
+            $("#character div.slogan").append("<div>我想<highlight>加入創創</highlight></div>");
+            $("#character div.slogan").append("<div>結識<highlight>志同道合的夥伴</highlight></div>");
+            $("#character div.slogan").append("<div>善用<highlight>創創提供的資源</highlight></div>");
+            $("#character div.slogan").append("<div>打造一個</div>");
+            $("#character div.slogan").append("<div><highlight>更好的世界</highlight></div>");
 
             var i = 0;
             var showInterval = setInterval(function(){
                 $("#character div.slogan>div:nth-child(" + (i+1) +")").addClass("show-by-opacity");
                 i ++;
-                if(i>=5){
+                if(i >= 7){
                     clearInterval(showInterval);
                 }
             }, 100);
