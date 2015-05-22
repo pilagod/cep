@@ -1,15 +1,14 @@
 $(function(){
     start();
-
 }());
 
 function start(){
     init();
     introduction(); //  7 secs
     setTimeout(function(){
-        $("#typing")[0].volume = 0.1;
-    }, 5800);
-    setTimeout(character, 5800);
+        $("#typing")[0].volume = 0.5;
+    }, 5700);
+    setTimeout(character, 5700);
     setTimeout(motivation, 37000);
     setTimeout(conclusion, 64500);
     //conclusion();
@@ -20,7 +19,7 @@ function start(){
 }
 
 function init(){
-    $("#typing")[0].volume = 0.3;
+    $("#typing")[0].volume = 1;
 }
 
 /*******************************/
@@ -140,13 +139,35 @@ function projectBreakBox(){
     playTypingSound();
     setTimeout(function(){
         var object = $("#character div.row.project span.breakbox");
-        var strings = [" <h3>HackLCD專案</h3><br>" +
-            "不受到傳統白紙黑字的車宣侷限，<br>" +
-            "HackLCD是我在HackNTU裡完成的專案，<br>" +
-            "是目前<highlight>校內唯一會發光的車宣</highlight>。",
+        var strings = [" <h3>HackLCD專案</h3> ^5000" ,//+
+            //"不受到傳統白紙黑字的車宣侷限，<br>" +
+            //"HackLCD是我在HackNTU裡完成的專案，<br>" +
+            //"是目前<highlight>校內唯一會發光的車宣</highlight>。",
             ""
         ];
-        typeWords(object, strings, function(){$("#character div.row.project span.typed-cursor").remove();});
+        typeWords(object, strings);
+
+        setTimeout(function(){
+            pauseTypingSound();
+            removeCursor();
+            $("#character div.row.project div:first-of-type").append(
+                "<div class='content'>" +
+                    "<br>" +
+                    "不受到傳統白紙黑字的車宣侷限，<br>" +
+                    "HackLCD是我在HackNTU裡完成的專案，<br>" +
+                    "是目前<highlight>校內唯一會發光的車宣</highlight>。" +
+                "</div>"
+            );
+            setTimeout(function(){
+                $("#character div.row.project div.content").addClass("show-by-opacity");
+                setTimeout(function(){
+                    $("#character div.row.project div.content").removeClass("show-by-opacity");
+                    setTimeout(function(){
+                        $("#character div.row.project div.content").remove();
+                    }, 600);
+                }, 5000)
+            }, 50)
+        }, 500);
 
         $("#character div.row.project img").addClass("show-by-opacity");
         setTimeout(function(){
@@ -157,9 +178,9 @@ function projectBreakBox(){
             $("#character div.row.project img").attr("src", "imgs/character_LCD2.jpg");
         }, 3500);
 
-        setTimeout(function(){
-            pauseTypingSound();
-        }, 4425);
+        //setTimeout(function(){
+        //    pauseTypingSound();
+        //}, 4425);
 
         setTimeout(function(){
             $("#breakbox_wrapper").css({
@@ -182,21 +203,44 @@ function projectEmbedded(){
     playTypingSound();
     setTimeout(function(){
         var object = $("#character div.row.project span.multithinking");
-        var strings = [" <h3>嵌入式系統專案</h3><br>" +
-            "接觸過<highlight>軟硬整合的領域</highlight>，<br>" +
-            "在思考、實作的過程中，<br>" +
-            "能以<highlight>多元的角度綜觀全局</highlight>。 <br>" +
-            "（影片是我以<highlight>手機控制攝影機</highlight>的行為)",
+        var strings = [" <h3>嵌入式系統專案</h3> ^5500", //+
+            //"接觸過<highlight>軟硬整合的領域</highlight>，<br>" +
+            //"在思考、實作的過程中，<br>" +
+            //"能以<highlight>多元的角度綜觀全局</highlight>。 <br>" +
+            //"（影片是我以<highlight>手機控制攝影機</highlight>的行為)",
             ""
         ];
-        typeWords(object, strings, function(){$("#character div.row.project span.typed-cursor").remove(); pauseTypingSound();});
+        typeWords(object, strings);
+
+        setTimeout(function(){
+            pauseTypingSound();
+            removeCursor();
+            $("#character div.row.project div:first-of-type").append(
+                "<div class='content'>" +
+                    "<br>" +
+                    "接觸過<highlight>軟硬整合的領域</highlight>，<br>" +
+                    "在思考、實作的過程中，<br>" +
+                    "能以<highlight>多元的角度綜觀全局</highlight>。 <br>" +
+                    "（影片是我以<highlight>手機控制攝影機</highlight>的行為)" +
+                "</div>"
+            );
+            setTimeout(function(){
+                $("#character div.row.project div.content").addClass("show-by-opacity");
+                setTimeout(function(){
+                    $("#character div.row.project div.content").removeClass("show-by-opacity");
+                    setTimeout(function(){
+                        $("#character div.row.project div.content").remove();
+                    }, 600);
+                }, 5500)
+            }, 50)
+        }, 500);
 
         $("#character div.row.project video").addClass("show-by-opacity");
         $("#character div.row.project video")[0].play();
 
-        setTimeout(function(){
-            pauseTypingSound();
-        }, 4500);
+        //setTimeout(function(){
+        //    pauseTypingSound();
+        //}, 4500);
 
         setTimeout(function(){
             $("#multithinking_wrapper").css({
@@ -205,7 +249,7 @@ function projectEmbedded(){
             });
             $("#multithinking_wrapper").removeClass("scale-big");
             $("#character div.row.project video").removeClass("show-by-opacity");
-        }, 5500)
+        }, 6000)
     }, 1000);
 }
 
@@ -219,22 +263,45 @@ function projectFB(){
     playTypingSound();
     setTimeout(function(){
         var object = $("#character div.row.project span.action");
-        var strings = [" <h3>Fakebook</h3><br>" +
-        "這是類似FB的網站作品，<br>" +
-        "主要是為了<highlight>學習\"Node.js\"</highlight>，<br>" +
-        "從<highlight>完全不會到完成</highlight>，總共花<highlight>一個禮拜</highlight>。<br>" +
-        "(圖中是當初上線讓朋友登入留言的畫面)",
+        var strings = [" <h3>Fakebook</h3> ^5500", //+
+        //"這是類似FB的網站作品，<br>" +
+        //"主要是為了<highlight>學習\"Node.js\"</highlight>，<br>" +
+        //"從<highlight>完全不會到完成</highlight>，總共花<highlight>一個禮拜</highlight>。<br>" +
+        //"(圖中是當初上線讓朋友登入留言的畫面)",
             ""
         ];
-        typeWords(object, strings, function(){$("#character div.row.project span.typed-cursor").remove(); pauseTypingSound()});
+        typeWords(object, strings);
+
+        setTimeout(function(){
+            pauseTypingSound();
+            removeCursor();
+            $("#character div.row.project div:first-of-type").append(
+                "<div class='content'>" +
+                    "<br>" +
+                    "這是類似FB的網站作品，<br>" +
+                    "主要是為了<highlight>學習\"Node.js\"</highlight>，<br>" +
+                    "從<highlight>完全不會到完成</highlight>，只花<highlight>一個禮拜</highlight>。<br>" +
+                    "(圖中是當初上線讓朋友登入留言的畫面)" +
+                "</div>"
+            );
+            setTimeout(function(){
+                $("#character div.row.project div.content").addClass("show-by-opacity");
+                setTimeout(function(){
+                    $("#character div.row.project div.content").removeClass("show-by-opacity");
+                    setTimeout(function(){
+                        $("#character div.row.project div.content").remove();
+                    }, 600);
+                }, 5500)
+            }, 50)
+        }, 500);
 
         $("#character div.row.project img").attr("src", "imgs/character_fakebook.png");
         $("#character div.row.project img").css("padding-top", "0.5em");
         $("#character div.row.project img").addClass("show-by-opacity");
 
-        setTimeout(function(){
-            pauseTypingSound();
-        }, 5000);
+        //setTimeout(function(){
+        //    pauseTypingSound();
+        //}, 5000);
 
         setTimeout(function(){
             $("#action_wrapper").css({
@@ -290,22 +357,38 @@ function motivationSkill(){
     var strings = ["擁有技術開發的實作能力"];
     typeWords(object, strings, removeCursor);
 
+    //setTimeout(function(){
+    //    playTypingSound();
+    //}, 200);
     setTimeout(function(){
-        playTypingSound();
-    }, 200);
-    setTimeout(function(){
-        object = $("#content_skill");
-        strings = ["<highlight>網頁</highlight>、<highlight>App</highlight>、<highlight>硬體</highlight>實作經驗，<br>" +
+        //object = $("#content_skill");
+        //strings = ["<highlight>網頁</highlight>、<highlight>App</highlight>、<highlight>硬體</highlight>實作經驗，<br>" +
+        //    "以及<highlight>三次實習</highlight>、<highlight>獨立接案</highlight>的經歷，<br>" +
+        //    "加上<highlight>快速學習的能力</highlight>，<br>" +
+        //    "搭配<highlight>創創提供的豐富資源</highlight>，<br>" +
+        //    "絕對能<highlight>產生很多驚艷的火花</highlight>。",
+        //    ""
+        //];
+        //typeWords(object, strings);
+
+        removeCursor();
+        $("#content_skill").append(
+            "<highlight>網頁</highlight>、<highlight>App</highlight>、<highlight>硬體</highlight>實作經驗，<br>" +
             "以及<highlight>三次實習</highlight>、<highlight>獨立接案</highlight>的經歷，<br>" +
             "加上<highlight>快速學習的能力</highlight>，<br>" +
             "搭配<highlight>創創提供的豐富資源</highlight>，<br>" +
-            "絕對能<highlight>產生很多驚艷的火花</highlight>。",
-            ""
-        ];
-        typeWords(object, strings, removeCursor);
+            "絕對能<highlight>產生很多驚艷的火花</highlight>。"
+        );
         setTimeout(function(){
-            pauseTypingSound();
-        }, 4200);
+            $("#content_skill").addClass("show-by-opacity");
+            setTimeout(function(){
+                $("#content_skill").removeClass("show-by-opacity");
+            }, 5000)
+        }, 50);
+
+        //setTimeout(function(){
+        //    pauseTypingSound();
+        //}, 4200);
         setTimeout(function(){
             $("#motivation div.row.description>div:first-child").removeClass("show-by-opacity");
         }, 4800)
@@ -319,8 +402,8 @@ function motivationSkill(){
             if(i == 5){
                 clearInterval(timeInterval);
             }
-        }, 700);
-    }, 700);
+        }, 500);
+    }, 1500);
 
     setTimeout(function(){
         for(i=0; i<5; i++)
@@ -334,30 +417,54 @@ function motivationCooperation(){
     var strings = ["擁有豐富的跨領域合作經驗"];
     typeWords(object, strings, removeCursor);
 
+    //setTimeout(function(){
+    //    playTypingSound();
+    //}, 200);
+    //setTimeout(function(){
+    //    object = $("#content_cooperation");
+    //    strings = ["在<highlight>HackNTU</highlight>與<highlight>九個部門</highlight>密切合作；<br>" +
+    //    "在<highlight>InfoPlat</highlight>執行<highlight>跨領域合作專案</highlight>；<br>" +
+    //    "與<highlight>國企</highlight>、<highlight>經濟系夥伴</highlight>參與<highlight>2015ATCC</highlight>；<br>" +
+    //    "...<br>" +
+    //    "這些經驗<br>" +
+    //    "讓我的<highlight>想法</highlight>、<highlight>能力</highlight>更加<highlight>多元豐富</highlight>，<br>" +
+    //    "在<highlight>創創</highlight>裡與<highlight>不同領域的人合作</highlight>，<br>" +
+    //    "一定會創造出很有<highlight>價值的成果</highlight>。",
+    //        ""
+    //    ];
+    //    typeWords(object, strings, removeCursor);
+    //
+    //    setTimeout(function(){
+    //        pauseTypingSound();
+    //    }, 7100);
+    //    setTimeout(function(){
+    //        $("#motivation div.row.description>div:nth-child(2)").removeClass("show-by-opacity");
+    //    }, 8200)
+    //}, 1300);
+
     setTimeout(function(){
-        playTypingSound();
-    }, 200);
-    setTimeout(function(){
-        object = $("#content_cooperation");
-        strings = ["在<highlight>HackNTU</highlight>與<highlight>九個部門</highlight>密切合作；<br>" +
-        "在<highlight>InfoPlat</highlight>執行<highlight>跨領域合作專案</highlight>；<br>" +
-        "與<highlight>國企</highlight>、<highlight>經濟系夥伴</highlight>參與<highlight>2015ATCC</highlight>；<br>" +
-        "...<br>" +
-        "這些經驗<br>" +
-        "讓我的<highlight>想法</highlight>、<highlight>能力</highlight>更加<highlight>多元豐富</highlight>，<br>" +
-        "在<highlight>創創</highlight>裡與<highlight>不同領域的人合作</highlight>，<br>" +
-        "一定會創造出很有<highlight>價值的成果</highlight>。",
-            ""
-        ];
-        typeWords(object, strings, removeCursor);
+        removeCursor();
+        $("#content_cooperation").append(
+            "在<highlight>HackNTU</highlight>與<highlight>九個部門</highlight>密切合作；<br>" +
+            "在<highlight>InfoPlat</highlight>執行<highlight>跨領域合作專案</highlight>；<br>" +
+            "與<highlight>國企</highlight>、<highlight>經濟系夥伴</highlight>參與<highlight>2015ATCC</highlight>；<br>" +
+            "...<br>" +
+            "這些經驗<br>" +
+            "讓我的<highlight>想法</highlight>、<highlight>能力</highlight>更加<highlight>多元豐富</highlight>，<br>" +
+            "在<highlight>創創</highlight>裡與<highlight>不同領域的人合作</highlight>，<br>" +
+            "一定會創造出很有<highlight>價值的成果</highlight>。"
+        );
+        setTimeout(function(){
+            $("#content_cooperation").addClass("show-by-opacity");
+            setTimeout(function(){
+                $("#content_cooperation").removeClass("show-by-opacity");
+            }, 8100)
+        }, 50);
 
         setTimeout(function(){
-            pauseTypingSound();
-        }, 7100);
-        setTimeout(function(){
             $("#motivation div.row.description>div:nth-child(2)").removeClass("show-by-opacity");
-        }, 8200)
-    }, 1300);
+        }, 8200);
+    }, 1300)
 
     var i = 0;
     setTimeout(function(){
@@ -368,7 +475,7 @@ function motivationCooperation(){
                 clearInterval(timeInterval);
             }
         }, 800);
-    }, 800);
+    }, 1300);
 
     setTimeout(function(){
         for(i=0; i<5; i++)
@@ -382,23 +489,40 @@ function motivationChange(){
     var strings = ["渴望「讓世界更好」的心"];
     typeWords(object, strings, removeCursor);
 
+    //setTimeout(function(){
+    //    playTypingSound();
+    //}, 200);
     setTimeout(function(){
-        playTypingSound();
-    }, 200);
-    setTimeout(function(){
-        object = $("#content_change");
-        strings = ["我希望<highlight>這個社會</highlight>，<br>" +
-        "能<highlight>因為我更好</highlight>； ^200 <br><br>" +
-        "我希望<highlight>這個世界</highlight>，<br>" +
-        "能<highlight>因為我而有所不同</highlight>； ^200 <br><br>" +
-        "我想<highlight>加入創創</highlight>，<br>" +
-        "挖掘<highlight>不平凡的契機</highlight>。",
-            ""
-        ];
-        typeWords(object, strings, removeCursor);
+        //object = $("#content_change");
+        //strings = ["我希望<highlight>這個社會</highlight>，<br>" +
+        //"能<highlight>因為我更好</highlight>； ^200 <br><br>" +
+        //"我希望<highlight>這個世界</highlight>，<br>" +
+        //"能<highlight>因為我而有所不同</highlight>； ^200 <br><br>" +
+        //"我想<highlight>加入創創</highlight>，<br>" +
+        //"挖掘<highlight>不平凡的契機</highlight>。",
+        //    ""
+        //];
+        //typeWords(object, strings, removeCursor);
+
+        removeCursor();
+        $("#content_change").append(
+            "我希望<highlight>這個社會</highlight>，<br>" +
+            "能<highlight>因為我更好</highlight>；<br><br>" +
+            "我希望<highlight>這個世界</highlight>，<br>" +
+            "能<highlight>因為我而有所不同</highlight>；<br><br>" +
+            "我想<highlight>加入創創</highlight>，<br>" +
+            "挖掘<highlight>不平凡的契機</highlight>。"
+        );
         setTimeout(function(){
-            pauseTypingSound();
-        }, 4500);
+            $("#content_change").addClass("show-by-opacity");
+            setTimeout(function(){
+                $("#content_change").removeClass("show-by-opacity");
+            }, 5000)
+        }, 50);
+
+        //setTimeout(function(){
+        //    pauseTypingSound();
+        //}, 4500);
     }, 1300);
 
     setTimeout(function(){
@@ -406,7 +530,7 @@ function motivationChange(){
         setTimeout(function(){
             $("#motivation div.change>img:nth-child(1)").removeClass("show-by-opacity");
         }, 4500)
-    }, 1500);
+    }, 2500);
 }
 
 function motivationEnd(){
@@ -442,14 +566,14 @@ function conclusion(){
             $("#character div.slogan").append("<div>我想<highlight>加入創創</highlight></div>");
             $("#character div.slogan").append("<div>結識<highlight>志同道合的夥伴</highlight></div>");
             $("#character div.slogan").append("<div>善用<highlight>創創提供的資源</highlight></div>");
-            $("#character div.slogan").append("<div>打造一個</div>");
-            $("#character div.slogan").append("<div><highlight>更好的世界</highlight></div>");
+            $("#character div.slogan").append("<div>創造一個<highlight>更好的世界</highlight></div>");
+            //$("#character div.slogan").append("<div><highlight>更好的世界</highlight></div>");
 
             var i = 0;
             var showInterval = setInterval(function(){
                 $("#character div.slogan>div:nth-child(" + (i+1) +")").addClass("show-by-opacity");
                 i ++;
-                if(i >= 7){
+                if(i >= 6){
                     clearInterval(showInterval);
                 }
             }, 100);

@@ -35,7 +35,8 @@ object {
 
 object ~ span {
     font-size: 1.15em;
-    color: #2f3a35;
+    /*color: #2f3a35;*/
+    color: #350001;
 }
 
 section {
@@ -168,6 +169,16 @@ div.main {
 
 #character div.row.project>div:first-of-type {
     padding-left: 2.5em;
+}
+
+#character div.row.project div.content{
+    opacity: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 #character div.row.project img{
@@ -399,6 +410,16 @@ div.main {
     width: 35em;
 }
 
+#content_skill, #content_cooperation, #content_change{
+    opacity: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
 /* Footer */
 
 footer {
@@ -470,7 +491,7 @@ highlight {
     /*color: dodgerblue;*/
     /*color: #337BB8;*/
     color: #efc034;
-    font-size: 1.15em;
+    font-size: 1.1em;
     margin: 0 0.1em;
 }
 
