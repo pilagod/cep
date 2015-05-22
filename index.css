@@ -8,9 +8,12 @@ html, body{
     height: 100%;
     font-size: 18px;
     line-height: 1.5;
+    /*color: #2f3a35;*/
+    color: #ffffff;
     font-family: Adobe-Fan-Heiti-Std-B;
 
-    background-color: #f5dea1;
+    background-color: #86bdba;
+    /*background-color: #f5dea1;*/
     /*overflow-y: hidden;*/
 }
 
@@ -20,6 +23,18 @@ img {
     -ms-transition: all 1s ease-in-out;
     -o-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
+}
+
+object {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+object ~ span {
+    color: #2f3a35;
 }
 
 section {
@@ -99,7 +114,7 @@ div.main {
     background: transparent;
 }
 
-#character img {
+#character object {
     width: 12em;
 }
 
@@ -267,7 +282,7 @@ div.main {
 * motivation imgs
 */
 
-#motivation img {
+#motivation object {
     /*opacity: 0;*/
     width: 10em;
 }
@@ -394,6 +409,25 @@ footer {
 }
 
 /*******************************/
+/*         Conclusion          */
+/*******************************/
+
+.slogan {
+    position: relative;
+    top: -0.8em;
+}
+
+.slogan div{
+    opacity: 0;
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+/*******************************/
 /*           General           */
 /*******************************/
 
@@ -433,7 +467,8 @@ highlight {
     /*color: palegreen;*/
     /*color: lightseagreen;*/
     /*color: dodgerblue;*/
-    color: #337BB8;
+    /*color: #337BB8;*/
+    color: #efc034;
 }
 
 

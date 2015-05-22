@@ -6,9 +6,13 @@ $(function(){
 function start(){
     init();
     introduction(); //  7 secs
+    setTimeout(function(){
+        $("#typing")[0].volume = 0.1;
+    }, 5800);
     setTimeout(character, 5800);
     setTimeout(motivation, 37000);
     setTimeout(conclusion, 64500);
+    //conclusion();
     //motivation();
     //setTimeout(conclusion, 27500);
     //character()
@@ -18,6 +22,10 @@ function start(){
 function init(){
     $("#typing")[0].volume = 0.3;
 }
+
+/*******************************/
+/*        Introduction         */
+/*******************************/
 
 function introduction(){
     setTimeout(function(){
@@ -44,6 +52,10 @@ function introduction(){
         }, 700)
     }, 700);
 }
+
+/*******************************/
+/*          Character          */
+/*******************************/
 
 function character(){
     $("#introduction span.typed-cursor").remove();
@@ -235,7 +247,13 @@ function projectFB(){
     }, 1000);
 }
 
+/*******************************/
+/*          Motivation         */
+/*******************************/
+
 function motivation(){
+    $("#character div.row.project").remove();
+
     $("#introduction").css("top", "-100%");
     $("#character").css("top", "-100%");
     $("#motivation").css("top", "0");
@@ -361,7 +379,7 @@ function motivationCooperation(){
 function motivationChange(){
     $("#motivation div.row.description>div:nth-child(3)").addClass("show-by-opacity");
     var object = $("#change ~ span");
-    var strings = ["一顆「想讓世界更好」的心"];
+    var strings = ["渴望「讓世界更好」的心"];
     typeWords(object, strings, removeCursor);
 
     setTimeout(function(){
@@ -401,11 +419,41 @@ function motivationEnd(){
     }, 1000);
 }
 
-// Conclusion
+/*******************************/
+/*          Conclusion         */
+/*******************************/
+
 function conclusion(){
+    $("#motivation div.imgs").remove();
+    $("#motivation div.row.content").remove();
+
     $("#character").css("top", "0");
     $("#character div.container-fluid>span:first-of-type").addClass("hide-by-opacity");
     $("#motivation div.container-fluid>span:first-of-type").addClass("hide-by-opacity");
+
+    setTimeout(function(){
+        $("#character div.row.description").css("margin-top", "-3em");
+        $("#character div.row.description").addClass("scale-small");
+        $("#motivation div.row.description").addClass("scale-small");
+
+        setTimeout(function(){
+            $("#character div.slogan").append("<div>我是何均晏</div>");
+            $("#character div.slogan").append("<div>來自台大資管系</div>");
+            $("#character div.slogan").append("<div>我想加入創創</div>");
+            $("#character div.slogan").append("<div>結識志同道合的夥伴</div>");
+            $("#character div.slogan").append("<div>善用創創提供的資源</div>");
+            $("#character div.slogan").append("<div>打造一個更好的世界</div>");
+
+            var i = 0;
+            var showInterval = setInterval(function(){
+                $("#character div.slogan>div:nth-child(" + (i+1) +")").addClass("show-by-opacity");
+                i ++;
+                if(i>=5){
+                    clearInterval(showInterval);
+                }
+            }, 100);
+        }, 1500);
+    }, 1500);
 
 }
 
